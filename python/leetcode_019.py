@@ -35,7 +35,7 @@ class Solution(object):
             return head.next
         if (n==1):
             note[m-2].next=None
-            #note[m-1]=None WA?
+            #note[m-1]=None WA???
             return head
         note[m-n-1].next=note[m-n+1]
         return head
