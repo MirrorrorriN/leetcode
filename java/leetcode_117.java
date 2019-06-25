@@ -42,8 +42,8 @@ class Solution {
             }
             nextN=nextN.next;
         }
-        connect(root.left);
         connect(root.right);
+        connect(root.left);
         return root;
     }
 }
