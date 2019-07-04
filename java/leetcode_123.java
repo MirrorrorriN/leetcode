@@ -2,6 +2,7 @@
  * @lc app=leetcode id=123 lang=java
  *
  * [123] Best Time to Buy and Sell Stock III
+ * 明确一个事实，当天卖出再买进按题意可等同为没有交易，因此对于题干中同天不能买+卖不用太过再意，控制好次数即可
  */
 class Solution {
     public int maxProfit(int[] prices) {
