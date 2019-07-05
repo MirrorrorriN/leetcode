@@ -16,7 +16,7 @@ class Solution {
     class Res{
         private int finalRes;
         Res(int finalRes){
-
+            this.finalRes=finalRes;
         }
         public int getFinalRes(){
             return this.finalRes;
@@ -35,8 +35,8 @@ class Solution {
         if(node==null){
             return 0;
         }
-        int left=Math.max(this.helpler(node.left, new Res(res.getFinalRes())),0);
-        int right=Math.max(this.helpler(node.right, new Res(res.getFinalRes())),0);
+        int left=Math.max(this.helpler(node.left, res),0);
+        int right=Math.max(this.helpler(node.right, res),0);
         res.setFinalRes(Math.max(res.getFinalRes(),left+right+node.val));
         return Math.max(left, right)+node.val;
     }
